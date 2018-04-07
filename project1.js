@@ -12,26 +12,26 @@ document.onkeydown = function(e) {         //Telling Document To Listen For A Ke
 
     if (e.keyCode === 37) {                //Listenting For Left Arrow Key
          console.log("left")
-        falconX.left = falconX.left - 10;         //Move 10 Pexels Back.
+        falconX.left = falconX.left - 20;         //Move 10 Pexels Back.
         movefalconX()
 
     }
 
      if (e.keyCode === 39 ) {
         console.log("right")
-        falconX.left = falconX.left + 10;         //Move 10 Pexels Back.
+        falconX.left = falconX.left + 20;         //Move 10 Pexels.
         movefalconX()
     }
 
 if (e.keyCode === 38 ) {
         console.log("up")
-        falconX.left = falconX.left - 10;         //Move 10 Pexels Back.
+        falconX.left = falconX.left - 10;         //Move 10 Pexels.
         movefalconX()
     }
 
  if (e.keyCode === 40 ) {
         console.log("down")
-        falconX.left = falconX.left + 10;         //Move 10 Pexels Back.
+        falconX.left = falconX.left + 10;         //Move 10 Pexels.
         movefalconX()
     }
 };
