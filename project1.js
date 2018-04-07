@@ -3,37 +3,35 @@
 
 
 var falconX = {                                //Mirroring The Screen Position Of "falconX" To Reflect The The Position
-    top : 700,                              //**Currently Not Working...Confused On Scope..**???////
-    left: 500
-
+    top : 600,
+    left : 550
 };
+var missile = [];
 
 document.onkeydown = function(e) {         //Telling Document To Listen For A Key To Be Preesed Down.
 
     if (e.keyCode === 37) {                //Listenting For Left Arrow Key
-         console.log("left")
+         console.log("left");
         falconX.left = falconX.left - 20;         //Move 10 Pexels Back.
-        movefalconX()
-
+        movefalconX();
     }
 
-     if (e.keyCode === 39 ) {
-        console.log("right")
+     else if (e.keyCode === 39 ) {
+        console.log("right");
         falconX.left = falconX.left + 20;         //Move 10 Pexels.
-        movefalconX()
+        movefalconX();
     }
 
-if (e.keyCode === 38 ) {
-        console.log("up")
-        falconX.left = falconX.left - 10;         //Move 10 Pexels.
-        movefalconX()
+      else if (e.keyCode === 32) {
+        console.log('FiRE');
+        missile.push({
+            left: falconX.left + 15,
+            top: falconX.top
+        });
+        console.log(missile);
     }
 
- if (e.keyCode === 40 ) {
-        console.log("down")
-        falconX.left = falconX.left + 10;         //Move 10 Pexels.
-        movefalconX()
-    }
+
 };
 
 
