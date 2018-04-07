@@ -17,95 +17,30 @@ document.onkeydown = function(e) {         //Telling Document To Listen For A Ke
 
     }
 
-    else if (e.keyCode === 39 ) {
+     if (e.keyCode === 39 ) {
         console.log("right")
-        falconX.right = falconX.right + 10;         //Move 10 Pexels Back.
+        falconX.left = falconX.left + 10;         //Move 10 Pexels Back.
         movefalconX()
     }
 
+if (e.keyCode === 38 ) {
+        console.log("up")
+        falconX.left = falconX.left - 10;         //Move 10 Pexels Back.
+        movefalconX()
+    }
 
-
-
+ if (e.keyCode === 40 ) {
+        console.log("down")
+        falconX.left = falconX.left + 10;         //Move 10 Pexels Back.
+        movefalconX()
+    }
 };
 
 
-function movefalconX () {
-    document.getElementById('falconX').style = falconX.left + "px";
+function movefalconX () {                                                //Creating A Function To Move FalconX
+    document.getElementById('falconX').style.left = falconX.left + "px";     // Grabbing The Element By Its Id And Moving The Style Of Falcon X & Adding Pixels
+    // document.getElementById('falconX').style.right = falconX.right + "px";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  alert("Ready For Take Off!?");
-
-// const hero = document.getElementById('hero');
-// let margValue = 500;
-
-
-// document.addEventListener('keydown',(event) => {
-
-// console.log("Button is pushed")
-// });
-
-
-
-// function move(e) {
-
-//   if(e.keyCode == 39){
-//         margValue += 20;
-//         hero.style.left = margValue + ("px");
-
-//         }
-
-// };
-
-
-
-// document.onkeydown = move;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
