@@ -36,11 +36,11 @@
 
 
 .missile {
-  background-image: url("http://images.clipartpanda.com/exhaust-clipart-clipart-rocket-3e8f.png");
+  background-image: url("http://pixel.nymag.com/imgs/daily/vulture/2016/12/16/who-won-bracket/trump.png");
     position: absolute;
-    height: 80px;
-    width: 40px;
-    top: 450px;
+    height: 36px;
+    width: 36px;
+    top: 550px;
     left: 500px;
 
 }

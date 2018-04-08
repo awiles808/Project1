@@ -6,9 +6,11 @@ var falconX = {                                //Mirroring The Screen Position O
     top : 600,
     left : 550
 };
-var missile = [];
+var missiles = [];
 
 document.onkeydown = function(e) {         //Telling Document To Listen For A Key To Be Preesed Down.
+    console.log(e.keyCode);
+
 
     if (e.keyCode === 37) {                //Listenting For Left Arrow Key
          console.log("left");
@@ -24,22 +26,30 @@ document.onkeydown = function(e) {         //Telling Document To Listen For A Ke
 
       else if (e.keyCode === 32) {
         console.log('FiRE');
-        missile.push({
+        missiles.push({
             left: falconX.left + 15,
             top: falconX.top
         });
-        console.log(missile);
+        createMissiles();
     }
 
 
 };
 
 
-function movefalconX () {                                                //Creating A Function To Move FalconX
+function movefalconX() {                                                //Creating A Function To Move FalconX
     document.getElementById('falconX').style.left = falconX.left + "px";     // Grabbing The Element By Its Id And Moving The Style Of Falcon X & Adding Pixels
-    // document.getElementById('falconX').style.right = falconX.right + "px";
+
 }
 
+function createMissiles() {
 
+    document.getElementById('missiles').innerHTML = "";
+    for (var missile = 0; missile < missiles.length; missile = missile + 1 ){
+        document.getElementById('missiles').innerHTML +=
+        `<div class='missile' style='left:${missiles[missile].left}px; top:$
+        {missiles[missile].top}px;'></div>`;
+    }
+}
 
 
