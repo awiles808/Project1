@@ -1,5 +1,5 @@
 
-TweenMax.to(".asteroid",6, {top :900,});       //Using GreenSock Library To Animate Asteroid Falling
+TweenMax.to(".asteroid",4, {top :650, scale:0.5,repeat: -1, rotation:360, ease:Linear.easeNone});       //Using GreenSock Library To Animate Asteroid Falling
 
 
 var falconX = {                                //Declaring FalconX Postion Which Is Mirroring The Screen Position Of "falconX" In CSS.
