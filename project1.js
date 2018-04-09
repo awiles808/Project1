@@ -12,25 +12,25 @@ document.onkeydown = function(e) {         //Telling Document To Listen For A Ke
     console.log(e.keyCode);
 
 
-    if (e.keyCode === 37) {                //Listenting For Left Arrow Key
+    if (e.keyCode === 37) {                //Listenting For Left Arrow Key.
          console.log("left");
-        falconX.left = falconX.left - 20;         //Move 10 Pexels Back.
-        movefalconX();
+        falconX.left = falconX.left - 20;         //Move 20 Pexels Back.
+        movefalconX();                            //Calling Move FalconX 20px.
     }
 
-     else if (e.keyCode === 39 ) {
+     else if (e.keyCode === 39 ) {                 //Listening For Right Arrow Key.
         console.log("right");
-        falconX.left = falconX.left + 20;         //Move 10 Pexels.
+        falconX.left = falconX.left + 20;         //Move 20 Pexels.
         movefalconX();
     }
 
-      else if (e.keyCode === 32) {
+      else if (e.keyCode === 32) {                //If Space Bar Is Pushed.
         console.log('FiRE');
-        missiles.push({
-            left: falconX.left + 15,
+        missiles.push({                           //Grab Misseiles
+            left: falconX.left + 15,              //Put New "Cordiantes In Place"
             top: falconX.top
         });
-        createMissiles();
+        createMissiles();                         //Calling Create Missles Function
     }
 
 };
