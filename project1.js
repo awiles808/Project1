@@ -33,7 +33,6 @@ document.onkeydown = function(e) {         //Telling Document To Listen For A Ke
         createMissiles();
     }
 
-
 };
 
 
@@ -45,11 +44,40 @@ function movefalconX() {                                                //Creati
 function createMissiles() {
 
     document.getElementById('missiles').innerHTML = "";
-    for (var missile = 0; missile < missiles.length; missile = missile + 1 ){
+    for( var missile = 0; missile < missiles.length; missile = missile + 1 ){
         document.getElementById('missiles').innerHTML +=
         `<div class='missile' style='left:${missiles[missile].left}px; top:$
         {missiles[missile].top}px;'></div>`;
     }
 }
+
+function moveMissiles() {
+    for( var missile = 0; missile < missiles.length; missile = missile + 1 ){
+        missiles[missile].top = missiles[missile].top  -5;
+    }
+
+}
+
+function gameLoop(){
+    setTimeout(gameLoop , 100);
+    moveMissiles();
+    createMissiles();
+}
+    gameLoop();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -4,6 +4,7 @@
   width: 1200px;
   height: 800px;
   background-repeat: no-repeat;
+  position: absolute;
 }
 
 #falconX {
@@ -36,10 +37,10 @@
 
 
 .missile {
-  background-image: url("http://pixel.nymag.com/imgs/daily/vulture/2016/12/16/who-won-bracket/trump.png");
+  background-image: url("http://pixel.nymag.com/imgs/daily/vulture/2016/12/16/who-won-bracket/trump.png ");
     position: absolute;
-    height: 36px;
-    width: 36px;
+    height: 35px;
+    width: 35px;
     top: 550px;
     left: 500px;
 
