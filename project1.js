@@ -1,6 +1,5 @@
 
-
-
+TweenMax.to(".asteroid",6, {top :900});
 
 var falconX = {                                //Mirroring The Screen Position Of "falconX" To Reflect The The Position
     top : 600,
@@ -29,9 +28,12 @@ document.onkeydown = function(e) {         //Telling Document To Listen For A Ke
         missiles.push({                           //Grab Misseiles
             left: falconX.left + 15,              //Put New "Cordiantes In Place"
             top: falconX.top
+
         });
         createMissiles();                         //Calling Create Missles Function
+    TweenMax.to(".missile",6,{top:- 900});
     }
+
 
 };
 
