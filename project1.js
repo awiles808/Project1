@@ -42,7 +42,7 @@ document.onkeydown = function(e) {         //Telling Document To Listen For A Ke
             left: falconX.left + 15,              //Put New "Cordiantes In Place"-Where The Flacon X is + 15px
             top: falconX.top                      //Same Postition
 
-            });
+    });
         createMissiles();                         //Calling Create Missles Function
 
     }
@@ -61,7 +61,7 @@ function movefalconX() {                                                   //Cre
 
 function createMissiles() {                                                       //Creating A Function Called Create Missles
 
-    document.getElementById('missiles').innerHTML = "";                            //Grabbing Id Missles From The DOM And Getting Inside The HTML
+    // document.getElementById('missiles').innerHTML = "";                            //Grabbing Id Missles From The DOM And Getting Inside The HTML
     document.getElementById('missiles').innerHTML += `<div class='missile' style='left:${missiles[missiles.length-1].left}px; top:${missiles[missiles.length-1].top}px;'></div>`;                           //Grabbing "Inner HTML Space" In The Id of Missiles.
             //Creating a Div Tag And Placeing The Style{Top & Left} Of Missile Into The Array Of Missiles
  }
