@@ -24,6 +24,18 @@ document.onkeydown = function(e) {         //Telling Document To Listen For A Ke
         movefalconX();                            //Calling Function Move FalconX 20px.
     }
 
+      else if (e.keyCode === 38) {                //Listenting For Left Arrow Key.
+         console.log("up");
+        falconX.top = falconX.top - 20;         //Move 20 Pexels Back.
+        movefalconX();                            //Calling Function Of Move FalconX 20px.
+    }
+
+     else if (e.keyCode === 40 ) {                 //Listening For Right Arrow Key.
+        console.log("down");
+        falconX.top = falconX.top + 20;         //Move 20 Pexels.
+        movefalconX();                            //Calling Function Move FalconX 20px.
+    }
+
       else if (e.keyCode === 16) {                //Listen For Shift To Be Pushed.
         console.log('FiRE');
         missiles.push({                           //Grab Misseiles & "Push Postion Of FalconX + 15px"
@@ -43,19 +55,18 @@ TweenMax.to(".missile",20,{top: - 400});     //Calling Library To Listen For Any
 function movefalconX() {                                                   //Creating A Function To Move FalconX
     document.getElementById('falconX').style.left = falconX.left + "px";     // Grabbing The Element By Its Id And Style That Is Delcared Above,
     //Declaring It To falconX & Adding Pixels
+    document.getElementById('falconX').style.top = falconX.top + "px";
 
 }
 
 function createMissiles() {                                                       //Creating A Function Called Create Missles
                                                                                     //I am Confused Here....
     document.getElementById('missiles').innerHTML = "";                            //Grabbing Id Missles From The DOM and Getting Inside The HTML
-    for( var missile = 0; missile < missiles.length; missile = missile + 1 ){       //Creating For Loop
+    for( var missile = 0; missile < missiles.length; missile = missile + 1 ){       //Creating For Loop With
         document.getElementById('missiles').innerHTML +=
-        `<div class='missile' style='left:${missiles[missile].left}px; top:$
-        {missiles[missile].top}px;'></div>`;
+        `<div class='missile' style='left:${missiles[missile].left}px; top:${missiles[missile].top}px;'></div>`;
     }
  }
-
 
 
 
