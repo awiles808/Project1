@@ -60,12 +60,10 @@ function movefalconX() {                                                   //Cre
 }
 
 function createMissiles() {                                                       //Creating A Function Called Create Missles
-                                                                                    //I am Confused Here....
-    document.getElementById('missiles').innerHTML = "";                            //Grabbing Id Missles From The DOM and Getting Inside The HTML
-    for( var missile = 0; missile < missiles.length; missile = missile + 1 ){       //Creating For Loop With
-        document.getElementById('missiles').innerHTML +=
-        `<div class='missile' style='left:${missiles[missile].left}px; top:${missiles[missile].top}px;'></div>`;
-    }
+
+    document.getElementById('missiles').innerHTML = "";                            //Grabbing Id Missles From The DOM And Getting Inside The HTML
+    document.getElementById('missiles').innerHTML += `<div class='missile' style='left:${missiles[missiles.length-1].left}px; top:${missiles[missiles.length-1].top}px;'></div>`;                           //Grabbing "Inner HTML Space" In The Id of Missiles.
+            //Creating a Div Tag And Placeing The Style{Top & Left} Of Missile Into The Array Of Missiles
  }
 
 
