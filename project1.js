@@ -5,7 +5,17 @@ TweenMax.to("#asteroid",4, {top :650, left :150, scale:0.5,repeat: -1, rotation:
 
 });       //Using GreenSock Library To Animate Asteroid Falling
 
+// window load event makes sure image is // loaded before running animation
+$(window).on("load", function() {
 
+var tl = new TimelineMax({repeat:-1});
+tl.to("#background", 30, {
+    backgroundPosition: "-2247px 0px",
+    autoRound:true,
+    ease: Linear.easeNone
+});
+
+});
 var falconX = {                                //Declaring FalconX Postion Which Is Mirroring The Screen Position Of "falconX" In CSS.
     top : 600,                                 //600px From Top Of Screen
     left : 550                                 //550px From Left Of Screen
@@ -45,7 +55,7 @@ document.onkeydown = function(e) {         //Telling Document To Listen For A Ke
         movefalconX();                            //Calling Function Move falconX 20px.
     }
 
-       if (e.keyCode === 16) {                //Listen For Shift To Be Pushed.
+       if (e.keyCode === 191) {                //Listen For / To Be Pushed.
         console.log('FiRE');
         missilesArea.push({                           //Grab Misseiles & "Push Postion Of falconX + 15px"
             left: falconX.left + 15,              //Put New "Cordiantes In Place"-Where The Flacon X is + 15px
@@ -53,7 +63,7 @@ document.onkeydown = function(e) {         //Telling Document To Listen For A Ke
 
     });
         createMissiles();                         //Calling Create Missles Function
-
+document.onkeydown = move;
     }
 
 TweenMax.to(".missile",20,{top: - 400});     //Calling Library To Listen For Any Spaebar Key Press
@@ -105,7 +115,7 @@ function createMissiles() {                                                     
         moveEnemy();                            //Calling Function Move enemy 20px.
     }
 
-       if (e.keyCode === 20) {                //Listen For CAPS To Be Pushed.
+       if (e.keyCode === 70) {                //Listen For Letter F To Be Pushed.
         console.log('FiRE');
         enemyMissilesArea.push({                           //Grab Misseiles & "Push Postion Of enemy + 15px"
             left: enemy.left + 30,              //Put New "Cordiantes In Place"-Where The Flacon X is + 15px
@@ -117,7 +127,7 @@ function createMissiles() {                                                     
     }
 
 TweenMax.to(".enemyMissile",10,{top: 800
-});     //Calling Library To Listen For Any Spaebar Key Press
+});     //Calling Library To Listen For Any CAPS Press
 
 
 
@@ -140,6 +150,29 @@ function createEnemyMissiles() {                                                
  }
 
 };
+
+
+// var player1= document.getElementById('falconX');
+// var blast= document.getElementById('enemyMissile')
+
+// TweenMax.to(blast, 10, {top: 800, onUpdate:function(){
+//     checkCollision(player1, blast)
+// }});
+
+
+// var enemyMissile = {offsetLeft: 100, offsetTop:75, height: 40, width: 45};
+// var falconX = {offsetLeft: 150, offsetTop: 50, height: 230, width: 330};
+
+//     function checkCollision(EnemyMissile, falconX) {
+//         if (enemyMissile.offsetTop <= falconX[0].offsetTop + falconX[0].clientHeight &&
+//         enemyMissile.offsetLeft < falconX[0].offsetLeft + falconX[0].clientWidth &&
+//         enemyMissile.clientWidth + enemyMissile.offsetLeft >= falconX[0].offsetLeft) {
+//             console.log('collision!');
+//         }
+// }
+
+
+
 
  //check collisions
 
