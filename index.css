@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+.landing {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background: url("https://images3.alphacoders.com/241/241565.jpg") no-repeat 50% 50%;
+    display: table;
+    top: 0;
+    background-size: cover;
+}
+
+.content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 25%;
+}
+.content h1 {
+    font-family: 'Do Hyeon', sans-serif;'
+    top: 400px;
+    font-size: 350%;
+    font-weight: 350%;
+    color:  White;
+    line-height: 100%;
+    border: solid Black;
+    border-radius: 10px;
+
+
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 155%;
+    font-weight: 400;
+    color: White;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: solid Black;
+    padding: 10px 20px;
+    border-radius: 9px;
+    transition: all 0.5s;
+}
+.btn:hover {
+    color: Black;
+    border: solid White 2px;
+}
+
+
+
+/*--- Media Queries --*/
+@media screen and (max-width: 900px) {
+
+}
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 480px) {
+
+}
