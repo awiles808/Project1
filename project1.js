@@ -14,8 +14,8 @@ var enemy =   {                                //Declaring FalconX Postion Which
     top : 50,                                 //600px From Top Of Screen
     left : 550                                 //550px From Left Of Screen
 };
-var missiles = [];                            //Creating An Array Of Missiles
-var enemyMissiles =[];
+var missilesArea = [];                            //Creating An Array Of Missiles
+var enemyMissilesArea =[];
 
 document.onkeydown = function(e) {         //Telling Document To Listen For A Key To Be Preesed Down.
     console.log(e.keyCode);
@@ -27,27 +27,27 @@ document.onkeydown = function(e) {         //Telling Document To Listen For A Ke
         movefalconX();                            //Calling Function Of Move FalconX 20px.
     }
 
-     else if (e.keyCode === 39 ) {                 //Listening For Right Arrow Key.
+      if (e.keyCode === 39 ) {                 //Listening For Right Arrow Key.
         console.log("right");
         falconX.left = falconX.left + 20;         //Move 20 Pexels.
         movefalconX();                            //Calling Function Move FalconX 20px.
     }
 
-      else if (e.keyCode === 38) {                //Listenting For Left Arrow Key.
+       if (e.keyCode === 38) {                //Listenting For Left Arrow Key.
          console.log("up");
         falconX.top = falconX.top - 20;         //Move 20 Pexels Back.
         movefalconX();                            //Calling Function Of Move FalconX 20px.
     }
 
-     else if (e.keyCode === 40 ) {                 //Listening For Right Arrow Key.
+      if (e.keyCode === 40 ) {                 //Listening For Right Arrow Key.
         console.log("down");
         falconX.top = falconX.top + 20;         //Move 20 Pexels.
         movefalconX();                            //Calling Function Move falconX 20px.
     }
 
-      else if (e.keyCode === 16) {                //Listen For Shift To Be Pushed.
+       if (e.keyCode === 16) {                //Listen For Shift To Be Pushed.
         console.log('FiRE');
-        missiles.push({                           //Grab Misseiles & "Push Postion Of falconX + 15px"
+        missilesArea.push({                           //Grab Misseiles & "Push Postion Of falconX + 15px"
             left: falconX.left + 15,              //Put New "Cordiantes In Place"-Where The Flacon X is + 15px
             top: falconX.top                      //Same Postition
 
@@ -71,8 +71,8 @@ function movefalconX() {                                                   //Cre
 function createMissiles() {                                                       //Creating A Function Called Create Missles
 
 
-    document.getElementById('missiles').innerHTML +=
-    `<div class='missile' style='left:${missiles[missiles.length-1].left}px; top:${missiles[missiles.length-1].top}px;'></div>`;
+    document.getElementById('missilesArea').innerHTML +=
+    `<div class='missile' style='left:${missilesArea[missilesArea.length-1].left}px; top:${missilesArea[missilesArea.length-1].top}px;'></div>`;
 
             //Grabbing "Inner HTML Space" In The Id of Missiles.
             //Creating a Div Tag And Placeing The Style{Top & Left} Of Missile Into The Array Of Missiles
@@ -87,27 +87,27 @@ function createMissiles() {                                                     
     }
 
 
-     else if (e.keyCode === 68 ) {                 //Listening For Right Arrow Key.
+      if (e.keyCode === 68 ) {                 //Listening For Right Arrow Key.
         console.log("Enemy right");
         enemy.left = enemy.left + 20;         //Move 20 Pexels.
         moveEnemy();                            //Calling Function Move enemy 20px.
     }
 
-else if (e.keyCode === 87) {                //Listenting For Left Arrow Key.
+ if (e.keyCode === 87) {                //Listenting For Left Arrow Key.
          console.log("Enemy up");
         enemy.top = enemy.top - 20;         //Move 20 Pexels Back.
         moveEnemy();                            //Calling Function Of Move enemy 20px.
     }
 
-     else if (e.keyCode === 83 ) {                 //Listening For Right Arrow Key.
+      if (e.keyCode === 83 ) {                 //Listening For Right Arrow Key.
         console.log("enemy down");
         enemy.top = enemy.top + 20;         //Move 20 Pexels.
         moveEnemy();                            //Calling Function Move enemy 20px.
     }
 
-      else if (e.keyCode === 20) {                //Listen For CAPS To Be Pushed.
+       if (e.keyCode === 20) {                //Listen For CAPS To Be Pushed.
         console.log('FiRE');
-        enemyMissiles.push({                           //Grab Misseiles & "Push Postion Of enemy + 15px"
+        enemyMissilesArea.push({                           //Grab Misseiles & "Push Postion Of enemy + 15px"
             left: enemy.left + 30,              //Put New "Cordiantes In Place"-Where The Flacon X is + 15px
             top: enemy.top   + 100                   //Same Postition
 
@@ -116,7 +116,8 @@ else if (e.keyCode === 87) {                //Listenting For Left Arrow Key.
 
     }
 
-TweenMax.to(".enemyMissile",10,{top: 800});     //Calling Library To Listen For Any Spaebar Key Press
+TweenMax.to(".enemyMissile",10,{top: 800
+});     //Calling Library To Listen For Any Spaebar Key Press
 
 
 
@@ -131,8 +132,8 @@ function moveEnemy() {                                                   //Creat
 function createEnemyMissiles() {                                                       //Creating A Function Called Create Missles
 
 
-    document.getElementById('enemyMissiles').innerHTML +=
-    `<div class='enemyMissile' style='left:${enemyMissiles[enemyMissiles.length-1].left}px; top:${enemyMissiles[enemyMissiles.length-1].top}px;'></div>`;
+    document.getElementById('enemyMissilesArea').innerHTML +=
+    `<div class='enemyMissile' style='left:${enemyMissilesArea[enemyMissilesArea.length-1].left}px; top:${enemyMissilesArea[enemyMissilesArea.length-1].top}px;'></div>`;
 
             //Grabbing "Inner HTML Space" In The Id of Missiles.
             //Creating a Div Tag And Placeing The Style{Top & Left} Of Missile Into The Array Of Missiles
@@ -140,10 +141,34 @@ function createEnemyMissiles() {                                                
 
 };
 
+ //check collisions
+
+
+//  var player1 = document.getElementById("falconX");
+//     var bullett = document.getElementsByClassName("enemyMissiles");
+
+//     TweenMax.to(bullett, 10, {left: 15000, onUpdate: function() {
+//         // console.log(energyblast);
+//         // console.log(robot.offsetTop);
+//         checkCollision(falconX, enemyMissiles);
+
+//     }}
+
+// };
 
 
 
 
+// var blasts = {offsetLeft: 100, offsetTop:75, height: 40, width: 45};
+// var zaku = {offsetLeft: 150, offsetTop: 50, height: 230, width: 330};
+
+//     function checkCollision(blasts, zaku) {
+//         if (blasts.offsetTop <= zaku[0].offsetTop + zaku[0].clientHeight &&
+//         blasts.offsetLeft < zaku[0].offsetLeft + zaku[0].clientWidth &&
+//         blasts.clientWidth + blasts.offsetLeft >= zaku[0].offsetLeft) {
+//             console.log('collision!');
+//         }
+// }
 
 
 

@@ -28,13 +28,13 @@
 }
 
 
-#missiles {
+#missilesArea {
     width: 1200px;
     height: 800px;
     position: absolute;
 
 }
-#enemyMissiles{
+#enemyMissilesArea{
    width: 1200px;
     height: 800px;
     position: absolute;
