@@ -2,7 +2,6 @@
 TweenMax.to("#asteroid",4, {top :650, left :150, scale:0.5,repeat: -1, rotation:360, ease:Linear.easeNone
 
 
-
 });       //Using GreenSock Library To Animate Asteroid Falling
 
 // window load event makes sure image is // loaded before running animation
@@ -152,55 +151,7 @@ function createEnemyMissiles() {                                                
 };
 
 
-// var player1= document.getElementById('falconX');
-// var blast= document.getElementById('enemyMissile')
 
-// TweenMax.to(blast, 10, {top: 800, onUpdate:function(){
-//     checkCollision(player1, blast)
-// }});
-
-
-// var enemyMissile = {offsetLeft: 100, offsetTop:75, height: 40, width: 45};
-// var falconX = {offsetLeft: 150, offsetTop: 50, height: 230, width: 330};
-
-//     function checkCollision(EnemyMissile, falconX) {
-//         if (enemyMissile.offsetTop <= falconX[0].offsetTop + falconX[0].clientHeight &&
-//         enemyMissile.offsetLeft < falconX[0].offsetLeft + falconX[0].clientWidth &&
-//         enemyMissile.clientWidth + enemyMissile.offsetLeft >= falconX[0].offsetLeft) {
-//             console.log('collision!');
-//         }
-// }
-
-
-
-
- //check collisions
-
-
-//  var player1 = document.getElementById("falconX");
-//     var bullett = document.getElementsByClassName("enemyMissiles");
-
-//     TweenMax.to(bullett, 10, {left: 15000, onUpdate: function() {
-//         // console.log(energyblast);
-//         // console.log(robot.offsetTop);
-//         checkCollision(falconX, enemyMissiles);
-
-//     }}
-
-// };
-
-
-
-
-// var blasts = {offsetLeft: 100, offsetTop:75, height: 40, width: 45};
-// var zaku = {offsetLeft: 150, offsetTop: 50, height: 230, width: 330};
-
-//     function checkCollision(blasts, zaku) {
-//         if (blasts.offsetTop <= zaku[0].offsetTop + zaku[0].clientHeight &&
-//         blasts.offsetLeft < zaku[0].offsetLeft + zaku[0].clientWidth &&
-//         blasts.clientWidth + blasts.offsetLeft >= zaku[0].offsetLeft) {
-//             console.log('collision!');
-//         }
 // }
 
 
