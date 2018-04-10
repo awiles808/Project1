@@ -12,7 +12,7 @@ html, body {
     height: 100%;
     width: 100%;
     margin: auto;
-    background: url("https://images3.alphacoders.com/241/241565.jpg") no-repeat 50% 50%;
+    background: url("https://images6.alphacoders.com/560/560768.jpg") no-repeat 50% 50%;
     display: table;
     top: 0;
     background-size: cover;
@@ -29,7 +29,7 @@ html, body {
     top: 400px;
     font-size: 350%;
     font-weight: 350%;
-    color:  White;
+    color:  Black;
     line-height: 100%;
     border: solid Black;
     border-radius: 10px;
@@ -39,13 +39,13 @@ html, body {
 
 .btn {
     font-family: 'Montserrat', sans-serif;
-    font-size: 155%;
-    font-weight: 400;
-    color: White;
+    font-size: 400%;
+    font-weight: bold;
+    color: Black;
     text-transform: uppercase;
     text-decoration: none;
     border: solid Black;
-    padding: 10px 20px;
+    padding: 20px 30px;
     border-radius: 9px;
     transition: all 0.5s;
 }
@@ -53,6 +53,29 @@ html, body {
     color: Black;
     border: solid White 2px;
 }
+
+
+.btn2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 400%;
+    top:400px;
+    font-weight: bold;
+    color: Black;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: solid Black;
+    padding: 20px 30px;
+    border-radius: 9px;
+    transition: all 0.5s;
+}
+.btn2:hover {
+    color: Black;
+    border: solid White 2px;
+}
+
+
+
+
 
 
 
