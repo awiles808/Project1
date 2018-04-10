@@ -17,7 +17,7 @@
 
 }
 
-.enemy {
+#enemy {
   background-image: url("http://docs.garagegames.com/torquex/official/content/documentation/TorqueX%202D/Tutorials/images/evilFighter.png");
   height: 126px;
   width: 126px;
