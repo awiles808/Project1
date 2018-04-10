@@ -18,7 +18,7 @@
 }
 
 #enemy {
-  background-image: url("http://docs.garagegames.com/torquex/official/content/documentation/TorqueX%202D/Tutorials/images/evilFighter.png");
+  background-image: url("photos/FlippedEvil.png");
   height: 126px;
   width: 126px;
   position: absolute;
@@ -34,6 +34,12 @@
     position: absolute;
 
 }
+#enemyMissiles{
+   width: 1200px;
+    height: 800px;
+    position: absolute;
+
+}
 
 
 .missile {
@@ -45,14 +51,22 @@
   left: 500px;
 }
 
-.asteroid {
+.enemyMissile {
+  background-image: url("photos/Flipped Rocket.gif");
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  top: 70px;
+  left: 500px;
+}
+
+#asteroid {
     background-image: url("http://defcom1.net/xnalessons/asteroid.png");
     height: 130px;
     width: 130px;
     position: absolute;
     top: -5px;
     left: 400px;
-
 
 
 }
