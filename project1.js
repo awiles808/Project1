@@ -16,15 +16,17 @@ tl.to("#background", 30, {
 
 });
 var falconX = {                                //Declaring FalconX Postion Which Is Mirroring The Screen Position Of "falconX" In CSS.
-    top : 600,                                 //600px From Top Of Screen
-    left : 550                                 //550px From Left Of Screen
+    top : 15,                                 //600px From Top Of Screen
+    left : 0                                 //550px From Left Of Screen
 };
 var enemy =   {                                //Declaring FalconX Postion Which Is Mirroring The Screen Position Of "falconX" In CSS.
-    top : 50,                                 //600px From Top Of Screen
-    left : 550                                 //550px From Left Of Screen
+    top : 200,                                 //600px From Top Of Screen
+    left : 0                                 //550px From Left Of Screen
 };
 var missilesArea = [];                            //Creating An Array Of Missiles
 var enemyMissilesArea =[];
+let margValue = 0;
+let margValue2 = 0;
 
 document.onkeydown = function(e) {         //Telling Document To Listen For A Key To Be Preesed Down.
     console.log(e.keyCode);
@@ -32,9 +34,13 @@ document.onkeydown = function(e) {         //Telling Document To Listen For A Ke
 
     if (e.keyCode === 37) {                //Listenting For Left Arrow Key.
          console.log("left");
+         margValue += 70;
         falconX.left = falconX.left - 20;         //Move 20 Pexels Back.
-        movefalconX();                            //Calling Function Of Move FalconX 20px.
+        movefalconX();
+        if (margValue >= 1000) {
+        alert("Player 1 Is The Winner Winner Chicken Dinner!!");                            //Calling Function Of Move FalconX 20px.
     }
+        }
 
       if (e.keyCode === 39 ) {                 //Listening For Right Arrow Key.
         console.log("right");
@@ -57,15 +63,15 @@ document.onkeydown = function(e) {         //Telling Document To Listen For A Ke
        if (e.keyCode === 191) {                //Listen For / To Be Pushed.
         console.log('FiRE');
         missilesArea.push({                           //Grab Misseiles & "Push Postion Of falconX + 15px"
-            left: falconX.left + 15,              //Put New "Cordiantes In Place"-Where The Flacon X is + 15px
-            top: falconX.top                      //Same Postition
+            left: falconX.left + 40,              //Put New "Cordiantes In Place"-Where The Flacon X is + 15px
+            top: falconX.top                       //Same Postition
 
     });
         createMissiles();                         //Calling Create Missles Function
-document.onkeydown = move;
+
     }
 
-TweenMax.to(".missile",20,{top: - 400});     //Calling Library To Listen For Any Spaebar Key Press
+TweenMax.to(".missile",20,{left: + 40});     //Calling Library To Listen For Any Spaebar Key Press
 
 
 

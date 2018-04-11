@@ -11,22 +11,22 @@
 }
 
 #falconX {
-    background-image: url("http://docs.garagegames.com/torquex/official/content/documentation/TorqueX%202D/Tutorials/images/goodFighter.png");
+    background-image: url("photos/flipped.png");
     height: 126px;
     width: 126px;
     position: absolute;
-    top: 600px;
-    left: 550px;
+    top: 15px;
+    left: 0px;
 
 }
 
 #enemy {
-  background-image: url("photos/FlippedEvil.png");
+  background-image: url("photos/enemy.png");
   height: 126px;
   width: 126px;
   position: absolute;
-  top: 50px;
-  left: 550px;
+  top: 200px;
+  left: 0px;
 
 }
 
@@ -74,7 +74,14 @@
 
 }
 
+#finsihLine {
+  background-image: url("photos/finishline");
+  position: absolute;
+  height: 300px
+  width:100px;
+  left: 200px;
 
+}
 
 
 
