@@ -25,8 +25,7 @@ var enemy =   {                                //Declaring FalconX Postion Which
 };
 var missilesArea = [];                            //Creating An Array Of Missiles
 var enemyMissilesArea =[];
-let margValue = 0;
-let margValue2 = 0;
+
 
 document.onkeydown = function(e) {         //Telling Document To Listen For A Key To Be Preesed Down.
     console.log(e.keyCode);
@@ -37,7 +36,7 @@ document.onkeydown = function(e) {         //Telling Document To Listen For A Ke
          margValue += 70;
         falconX.left = falconX.left - 20;         //Move 20 Pexels Back.
         movefalconX();
-        if (margValue >= 1000) {
+        if (falconX >= 1000) {
         alert("Player 1 Is The Winner Winner Chicken Dinner!!");                            //Calling Function Of Move FalconX 20px.
     }
         }
